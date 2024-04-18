@@ -100,3 +100,23 @@ def test_get_top_n_with_n_higher_than_len_of_contracts_list():
 
     expected_open_contracts = [1, 5, 3, 2, 4]
     assert actual_open_contracts == expected_open_contracts
+
+
+def test_get_top_n_with_n_zero():
+    contracts_list = [
+        Contract(id=1, debt=5000),
+        Contract(id=2, debt=2500),
+        Contract(id=3, debt=3200),
+        Contract(id=4, debt=800),
+        Contract(id=5, debt=4500),
+    ]
+    renegotiated_contracts = []
+    top_n = 0
+
+    contracts_handler = Contracts()
+    actual_open_contracts = contracts_handler.get_top_n_open_contracts(
+        open_contracts=contracts_list, renegotiated_contracts=renegotiated_contracts, top_n=top_n
+    )
+
+    expected_open_contracts = []
+    assert actual_open_contracts == expected_open_contracts
