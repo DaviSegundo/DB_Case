@@ -1,6 +1,24 @@
 """
+For question 1 we have a problem that involves two main points, filtering and ordering.
 
-"""  # TODO: Add thoughts on question 1
+Considering that it is possible to expect a number of renegotiated contracts that will 
+significantly reduce the data set on which the ordering will be carried out, we have to apply a 
+simple filter that first goes through the list once and removes the identifiers of contracts 
+that have already been renegotiated, which will have a computational cost of O(n).
+
+After the filtering process, we will perform the ordering, based on the value of open contracts
+that have not been renegotiated. For this, the built-in python `sorted()` method was used, which 
+uses the Timsort algorithm, which has a complexity of O(n log n) in the average case and in the
+worst case, making it an efficient choice for large sets of data.
+
+This way, with the data filtered and ordered, we just need to take the top_n values and return
+them in a list with only the identifiers to obtain the solution to the proposed problem, which 
+results in a final complexity of O(n log n).
+
+The tests for the possible input cases of this problem can be found in the test file for question 1
+(tests/test_question_1.py), there the nomenclature of the tests represents what they are proposing 
+to be validated.
+"""
 
 from dataclasses import dataclass
 from typing import List

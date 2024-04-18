@@ -1,4 +1,8 @@
-# Python Technical Challenge
+# DB - Python Technical Challenge
+
+## Considerações sobre o desafio e sua resolução
+
+Dados os códigos bases que foram enviados no ZIP do desafio, aproveitei para fazer algumas melhorias na assinatura dos métodos com o uso de type hinting, o que acredito ser uma prática bem interessante para elevar o nível do código e facilitar o entendimento. Além disso, vale ressaltar que as explicações sobre como cada questão foi resolvida estão no início de cada arquivo. Foi adicionada documentação aos métodos e classes implementados, como um príncipio da escrita de código com qualidade. Ademais, casos de teste foram criados para verificar possíveis cenários e comportamentos que as soluções poderiam encontrar, validando que tudo estava funcionando como esperado.
 
 ## Question 1
 
@@ -83,6 +87,7 @@ assert how_many == expected_orders
 ## Pontos extras
 
 Esperamos que o teste seja entregue como um projeto e que o candidato tenha todas as preocupações, com o código, tais como, mas não limitado a:
+
 * Uso de boas práticas
 * Aderência aos padrões da linguagem
 * Documentação
