@@ -8,8 +8,8 @@ that have already been renegotiated, which will have a computational cost of O(n
 
 After the filtering process, we will perform the ordering, based on the value of open contracts
 that have not been renegotiated. For this, the built-in python `sorted()` method was used, which 
-uses the Timsort algorithm, which has a complexity of O(n log n) in the average case and in the
-worst case, making it an efficient choice for large sets of data.
+uses the Timsort algorithm and has a complexity of O(n log n) in the both average worst case,
+making it an efficient choice for large sets of data.
 
 This way, with the data filtered and ordered, we just need to take the top_n values and return
 them in a list with only the identifiers to obtain the solution to the proposed problem, which 
