@@ -1,23 +1,26 @@
 """
-For question 1 we have a problem that involves two main points, filtering and ordering.
+For Question 1, we encounter a challenge that revolves around two primary aspects: filtering and 
+sorting.
 
-Considering that it is possible to expect a number of renegotiated contracts that will 
-significantly reduce the data set on which the ordering will be carried out, we have to apply a 
-simple filter that first goes through the list once and removes the identifiers of contracts 
-that have already been renegotiated, which will have a computational cost of O(n).
+Given the expectation of a considerable number of renegotiated contracts, likely leading to a 
+substantial reduction in the dataset for subsequent ordering operations, our approach begins with
+a straightforward filtering step. This initial pass through the list serves to eliminate 
+identifiers associated with contracts that have already undergone renegotiation. This filtering 
+process incurs a computational cost of O(n), where n represents the size of the dataset.
 
-After the filtering process, we will perform the ordering, based on the value of open contracts
-that have not been renegotiated. For this, the built-in python `sorted()` method was used, which 
-uses the Timsort algorithm and has a complexity of O(n log n) in the both average worst case,
-making it an efficient choice for large sets of data.
+Following the filtering phase, the next step involves sorting the remaining contracts based on the
+value of open contracts that haven't undergone renegotiation. To accomplish this, we leverage 
+Python's built-in sorted() method, which employs the Timsort algorithm. With an average and 
+worst-case time complexity of O(n log n), Timsort stands as an efficient choice, particularly for
+handling large datasets.
 
-This way, with the data filtered and ordered, we just need to take the top_n values and return
-them in a list with only the identifiers to obtain the solution to the proposed problem, which 
-results in a final complexity of O(n log n).
+With the dataset now filtered and sorted, we simply need to extract the top N values and return
+them as a list containing only the identifiers. This approach yields a final computational 
+complexity of O(n log n).
 
-The tests for the possible input cases of this problem can be found in the test file for question 1
-(tests/test_question_1.py), there the nomenclature of the tests represents what they are proposing 
-to be validated.
+The test suite for evaluating various input scenarios related to this problem can be found in the
+designated test file for Question 1 (tests/test_question_1.py). Each test case within the file is
+labeled to indicate the specific validation it aims to perform.
 """
 
 from dataclasses import dataclass

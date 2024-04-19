@@ -1,39 +1,34 @@
 """
-For question 2 we have a problem that requires a little more logical reasoning compared to
-question 1.
+Question 2 presents a problem that demands a slightly deeper level of logical reasoning compared
+to Question 1.
 
-Here we have the idea of making combinations of pairs that maximize the value without exceeding the
-established threshold of the value that the sum of the two elements of the group can have.
+The task involves maximizing the value of pairs while ensuring their sum does not surpass a 
+predefined threshold. To tackle this, our first step is to sort the list, simplifying the problem.
+Once again, we utilize the sorted() method, as explained in the previous question, resulting in an
+ordered list by ascending values.
 
-Therefore, what we need to do first is sort the list to simplify the problem, which is where the 
-`sorted()` method comes in again, which was already explained in the previous question. With this,
-we have a list ordered by the values in ascending order.
+Next, we determine the number of trips required to collect all orders. We accomplish this by 
+examining the ends of the sorted list. Two cases arise:
 
-Therefore, it remains to calculate how many trips will be necessary to collect all the orders, 
-which will be done by checking the ends of the list, where it will be analyzed whether it is 
-possible to combine the highest value order with the lowest value or not. Thus, we have: 
-    
-    - Case 1: which constitutes a possible pair between the largest and the smallest, if their sum
-    does not exceed the maximum value allowed and 1 is added to the travel counter and the left 
-    pointer index increases by 1 and the index of the right pointer is reduced by 1, so we increase
-    the trip counter by 1, causing the check to continue for the remaining elements in the middle 
-    of the list. 
-    
-    - Case 2: where the largest value added to the smallest exceeds the maximum allowed value, 
-    which we can conclude that it is impossible for there to be a value that, combined with it, 
-    does not exceed the allowed limit, so we can reach the conclusion that it must be considered 
-    as a single trip, so we increase the trip counter by 1 and reduce the right pointer index to 
-    go to the new highest value.
+    - Case 1: A feasible pair exists between the highest and lowest values. If their sum remains
+    below the maximum threshold, we increment the trip counter by 1, advance the left pointer 
+    index by 1, and decrement the right pointer index by 1. This process continues for the 
+    remaining elements in the middle of the list.
 
-And so the checks continue varying between case 1 and 2 until we reach the total number of trips 
-needed to collect all orders.
+    - Case 2: The sum of the highest and lowest values exceeds the maximum threshold. In this
+    scenario, it's impossible to form a pair within the limit, thus we treat the highest value as
+    a single trip. Consequently, we increment the trip counter by 1 and adjust the right pointer 
+    index to the next highest value.
 
-With this we have a final complexity of O(n log n), as our sorting cost was O(n log n), as already
-specified in the previous question and we have the cost O(n) to go through the list once using the
-while loop.
+This cycle of checks, alternating between Case 1 and Case 2, continues until we determine the total
+number of trips needed to collect all orders.
 
-The tests for the possible input cases of this problem can be found in the test file for question 2
-(tests/test_question_2.py), where cases are parameterized as test input.
+The final computational complexity remains O(n log n), as sorting incurs a cost of  O(n log n), as
+specified in the previous question, and traversing the list once using the while loop contributes
+O(n).
+
+To evaluate various input scenarios for this problem, refer to the test file for Question 2 
+(tests/test_question_2.py), where parameterized test cases are provided.
 """
 
 from typing import List
