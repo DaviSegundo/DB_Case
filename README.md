@@ -2,7 +2,11 @@
 
 ## Considerações sobre o desafio e sua resolução
 
-Dados os códigos bases que foram enviados no ZIP do desafio, aproveitei para fazer algumas melhorias na assinatura dos métodos com o uso de type hinting, o que acredito ser uma prática bem interessante para elevar o nível do código e facilitar o entendimento. Além disso, vale ressaltar que as explicações sobre como cada questão foi resolvida estão no início de cada arquivo. Foi adicionada documentação aos métodos e classes implementados, como um príncipio da escrita de código com qualidade. Ademais, casos de teste foram criados para verificar possíveis cenários e comportamentos que as soluções poderiam encontrar, validando que tudo estava funcionando como esperado.
+Durante a revisão dos códigos fornecidos no ZIP do desafio, aproveitei a oportunidade para aprimorar a legibilidade e manutenibilidade do código. Uma das melhorias implementadas foi a adoção do type hinting na assinatura dos métodos, uma prática que considero bastante valiosa para elevar o nível de qualidade do código e facilitar o entendimento de sua estrutura. Além disso, destaquei que as explicações sobre a resolução de cada questão foram inclusas no início de cada arquivo, fornecendo insights adicionais sobre a lógica por trás das soluções implementadas.
+
+Para promover uma escrita de código mais robusta e compreensível, foram adicionadas documentações aos métodos e classes implementados. Esse princípio fundamental de desenvolvimento de software contribui significativamente para a clareza e a manutenção do código ao longo do tempo.
+
+Adicionalmente, foram criados casos de teste abrangentes para validar os diferentes cenários e comportamentos que as soluções poderiam encontrar. Esses testes garantem que todas as funcionalidades estejam operando conforme o esperado, aumentando a confiabilidade e a robustez do sistema como um todo.
 
 ## Question 1
 
