@@ -3,15 +3,15 @@ For question 2 we have a problem that requires a little more logical reasoning c
 question 1.
 
 Here we have the idea of making combinations of pairs that maximize the value without exceeding the
-established trashhold of the value that the sum of the two elements of the group can have.
+established threshold of the value that the sum of the two elements of the group can have.
 
 Therefore, what we need to do first is sort the list to simplify the problem, which is where the 
 `sorted()` method comes in again, which was already explained in the previous question. With this,
-we have a list ordered by the order values in ascending order.
+we have a list ordered by the values in ascending order.
 
 Therefore, it remains to calculate how many trips will be necessary to collect all the orders, 
 which will be done by checking the ends of the list, where it will be analyzed whether it is 
-possible to combine the highest value order with the lowest value order or not. Thus, we have: 
+possible to combine the highest value order with the lowest value or not. Thus, we have: 
     
     - Case 1: which constitutes a possible pair between the largest and the smallest, if their sum
     does not exceed the maximum value allowed and 1 is added to the travel counter and the left 
@@ -19,7 +19,7 @@ possible to combine the highest value order with the lowest value order or not. 
     the trip counter by 1, causing the check to continue for the remaining elements in the middle 
     of the list. 
     
-    - Case 2, where the largest value added to the smallest exceeds the maximum allowed value, 
+    - Case 2: where the largest value added to the smallest exceeds the maximum allowed value, 
     which we can conclude that it is impossible for there to be a value that, combined with it, 
     does not exceed the allowed limit, so we can reach the conclusion that it must be considered 
     as a single trip, so we increase the trip counter by 1 and reduce the right pointer index to 
